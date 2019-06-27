@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> Teste Com JavaScript </title>
+</head>
+<body>
+
+<form name="form1">
+<p>
+Nota1: <input type="text" name="nota1"><br>
+Nota2: <input type="text" name="nota2"><br>
+Nota3: <input type="text" name="nota3"><br>
+<input type= button value='Media'' onclick="Media()">
+</form>
+
+<script language=javascript>
+function Media(){
+
+var N1=eval(document.form1.nota1.value);
+var N2=eval(document.form1.nota2.value);
+var N3=eval(document.form1.nota3.value);
+
+alert("sua Media: "+(N1+N2+N3)/3)
+
+aluno = new Array()
+
+aluno[0]="Paulo";
+aluno[1]="Jose";
+aluno[2]="Luiz";
+aluno[3]="Felipe";
+
+document.write(aluno[2]);
+
+
+window.open("file:///C:/AspNet/Tags_HTML.html","janela","height=300, width=200,status=no, location=yes, toolbar=no , menubar=no");
+}
+
+</script>
+</body>
+</html>
