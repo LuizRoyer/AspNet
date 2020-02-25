@@ -1,0 +1,14 @@
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\bin\Debug\netcoreapp2.1\ContatosApi.deps.json
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\bin\Debug\netcoreapp2.1\ContatosApi.runtimeconfig.json
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\bin\Debug\netcoreapp2.1\ContatosApi.runtimeconfig.dev.json
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\bin\Debug\netcoreapp2.1\ContatosApi.dll
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.csproj.CoreCompileInputs.cache
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.RazorAssemblyInfo.cache
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.RazorAssemblyInfo.cs
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.AssemblyInfoInputs.cache
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.AssemblyInfo.cs
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.RazorTargetAssemblyInfo.cache
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\bin\Debug\netcoreapp2.1\ContatosApi.pdb
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.dll
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.pdb
+E:\Cursos\ASPNE.CORE\HdAspNerCore\ContatosApi\ContatosApi\obj\Debug\netcoreapp2.1\ContatosApi.csprojAssemblyReference.cache
