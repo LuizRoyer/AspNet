@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MVC_CoreEF.Models.Aluno>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Informações</h2>
+
+@if (!Model.Any())
+{
+    <p>Não existe dados</p>
+}
+else
+{
+    <table class="table-bordered">
+        <thead>
+
+            <tr>Nome </tr>
+            <tr>Taxa de Desconto(%)</tr>
+
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => aluno.Nome)</td>
+                    <td>@Html.DisplayFor(m => aluno.TipoSocio.TaxaDesconto)</td>
+                </tr>
+            }
+            </tbody>
+</table>
+}
