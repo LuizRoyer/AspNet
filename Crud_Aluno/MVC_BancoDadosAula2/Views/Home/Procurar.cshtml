@@ -1,0 +1,69 @@
+﻿@model Crud_Aluno.Models.Aluno
+
+@{
+    ViewData["Title"] = "Procurar";
+}
+
+<h2>Procurar</h2>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    @if (Model == null)
+    {
+        <dd>Nenhuma Informação foi Encontrada</dd>
+    }
+    else
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Sexo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DataNascimento)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Foto)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Foto)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Texto)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Texto)
+            </dd>
+
+        </dl>
+    }
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Return</a>
+</div>
