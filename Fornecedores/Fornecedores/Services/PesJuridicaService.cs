@@ -84,6 +84,7 @@ namespace Fornecedores.Services
                 throw new Exception(e.Message);
             }
         }
+        #region Métodos auxiliares
         private Pessoa PopularPessoa(PesJuridicaView pessoa)
         {
             return new Pessoa
@@ -113,5 +114,6 @@ namespace Fornecedores.Services
                 Cnpj = pessoa.Cnpj
             };
         }
+        #endregion
     }
 }

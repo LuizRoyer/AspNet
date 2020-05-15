@@ -59,7 +59,6 @@ namespace Fornecedores.Repositories
                                     FROM dbo.Contato
                                          WHERE 1=1");
 
-
             if (idPessoa == 0)
                 sqlSelect.Append(" AND ID = @id");
             else
@@ -69,7 +68,6 @@ namespace Fornecedores.Repositories
                     sqlSelect.Append(" AND IDPESSOA = @idPessoa");
                     sqlSelect.Append(" AND TELEFONE = @telefone");
                     sqlSelect.Append(" AND CELULAR = @celular");
-
                 }
                 else if (!string.IsNullOrWhiteSpace(telefone))
                 {
@@ -114,7 +112,6 @@ namespace Fornecedores.Repositories
             {
                 while (reader.Read())
                     return PopularObjeto(reader);
-
             }
 
             return new Contato();

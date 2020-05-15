@@ -10,7 +10,6 @@ namespace Fornecedores.Repositories
 {
     public class PesFisicaRepository : IPesFisicaRepository
     {
-
         private readonly SqlConnection _conn;
         private readonly SqlTransaction _trans;
 
@@ -22,7 +21,7 @@ namespace Fornecedores.Repositories
         public void Add(PesFisica obj)
         {
             string sqlInsert = @"INSERT INTO dbo.PesFisica
-                                    ( CPF ,DATANASCIMENTO,RG,IDPessoa)
+                                    ( CPF,DATANASCIMENTO,RG,IDPessoa)
                                 values
                                     (@cpf,@datanascimento,@rg,@idPessoa )";
 
@@ -50,7 +49,7 @@ namespace Fornecedores.Repositories
                           FROM dbo.PesFisica F,
 		                        dbo.Pessoa P
 								
-	                                   WHERE F.IdPessoa =P.Id");
+	                       WHERE F.IdPessoa =P.Id");
 
             if (!string.IsNullOrWhiteSpace(cpf))
                 sqlSelect.Append("     AND F.CPF =@cpf");
@@ -86,7 +85,7 @@ namespace Fornecedores.Repositories
                           FROM dbo.PesFisica F,
 		                        dbo.Pessoa P
 								
-	                                   WHERE F.IdPessoa =P.Id";
+	                          WHERE F.IdPessoa =P.Id";
 
             SqlCommand cmd = new SqlCommand(sqlSelect, _conn);
 

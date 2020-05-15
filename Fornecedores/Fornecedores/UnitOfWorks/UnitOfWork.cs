@@ -1,6 +1,7 @@
 ﻿using Fornecedores.IRepositories;
 using Fornecedores.Repositories;
-using Fornecedores.Repositories.Connections;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Data.SqlClient;
 
 namespace Fornecedores.UnitOfWorks
@@ -22,7 +23,7 @@ namespace Fornecedores.UnitOfWorks
 
         public UnitOfWork()
         {
-            _conn = Connection.ConnectionSQL();
+            _conn = new SqlConnection(ConnectionSql());
             _conn.Open();
             _trans = _conn.BeginTransaction();
         }
@@ -64,7 +65,6 @@ namespace Fornecedores.UnitOfWorks
                 _pessoaRepository = new PessoaRepository(_conn, _trans);
             return _pessoaRepository;
         }
-
         public IPesFisicaRepository PesFisicaRepository()
         {
             if (_pesFisicaRepository == null)
@@ -106,6 +106,19 @@ namespace Fornecedores.UnitOfWorks
             }
             catch
             { }
+        }
+        /// <summary>
+        /// Metodo para Obter a Conecção no Appsettings
+        /// </summary>
+        /// <returns></returns>
+        private string ConnectionSql()
+        {
+            string projectPath = AppDomain.CurrentDomain.BaseDirectory.Split(new String[] { @"bin\" }, StringSplitOptions.None)[0];
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(projectPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
+            return configuration.GetConnectionString("DefaultConnection");
         }
     }
 }

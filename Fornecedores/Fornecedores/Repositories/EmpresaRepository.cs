@@ -33,8 +33,7 @@ namespace Fornecedores.Repositories
 
             cmd.ExecuteNonQuery();
         }
-
-        public EmpresaView Get(int id)
+                public EmpresaView Get(int id)
         {
             StringBuilder sqlSelect = new StringBuilder();
 
@@ -64,7 +63,6 @@ namespace Fornecedores.Repositories
                                     AND E.idCidade = C.Id
                                     AND E.IdBairro = B.Id
                                     AND E.idCidade = B.idCidade");
-
 
             sqlSelect.Append(" AND EN.Id = @id ");
 

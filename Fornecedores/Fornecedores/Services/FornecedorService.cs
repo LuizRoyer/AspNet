@@ -75,8 +75,7 @@ namespace Fornecedores.Services
                 throw new Exception(e.Message);
             }
         }
-
-
+        #region Métodos auxiliares
         private void ValidarParametros(Fornecedor fornecedor)
         {
             if (fornecedor.IdEmpresa < 0)
@@ -113,5 +112,6 @@ namespace Fornecedores.Services
                 }
             }
         }
+        #endregion
     }
 }

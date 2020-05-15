@@ -39,7 +39,7 @@ namespace Fornecedores.Services
                 unitOfWork.Rollback();
                 return new BadRequestObjectResult(e.Message);
             }
-            return new OkResult();
+            return new OkObjectResult("Cadastrado Com Sucesso");
         }
 
         public IActionResult Deletar(int id, 
@@ -85,7 +85,7 @@ namespace Fornecedores.Services
             }
         }
 
-        #region Metodos Auxiliares
+        #region Métodos Auxiliares
         private Bairro PopularBairro(EnderecoView enderecoView)
         {
             return new Bairro

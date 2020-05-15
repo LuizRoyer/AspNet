@@ -40,15 +40,6 @@ namespace Fornecedores.Services
                 throw new Exception(e.Message);
             }
         }
-
-        private void ValidarParametros(Cidade cidade)
-        {
-            if (string.IsNullOrWhiteSpace(cidade.Nome))
-                throw new ArgumentException("Campo Nome Cidade é Obrigatório");
-            if (cidade.IdEstado <1)
-                throw new ArgumentException("Campo Estado é Obrigatório");
-        }
-
         public bool Deletar(int id,
           [FromServices] IUnitOfWork unitOfWork)
         {
@@ -79,6 +70,13 @@ namespace Fornecedores.Services
                 unitOfWork.Rollback();
                 throw new Exception(e.Message);
             }
+        }
+        private void ValidarParametros(Cidade cidade)
+        {
+            if (string.IsNullOrWhiteSpace(cidade.Nome))
+                throw new ArgumentException("Campo Nome Cidade é Obrigatório");
+            if (cidade.IdEstado < 1)
+                throw new ArgumentException("Campo Estado é Obrigatório");
         }
     }
 }

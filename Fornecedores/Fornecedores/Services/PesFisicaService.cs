@@ -84,6 +84,7 @@ namespace Fornecedores.Services
                 throw new Exception(e.Message);
             }
         }
+        #region Métodos auxiliares
         private void ValidarParametros(PesFisicaView pessoa)
         {
             if (string.IsNullOrWhiteSpace(pessoa.Nome))
@@ -129,5 +130,6 @@ namespace Fornecedores.Services
             };
 
         }
+        #endregion
     }
 }

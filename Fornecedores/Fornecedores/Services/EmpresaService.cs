@@ -73,6 +73,7 @@ namespace Fornecedores.Services
                 throw new Exception(e.Message);
             }
         }
+        #region Métodos auxiliares
         private bool ValidarAlteracao(Empresa empresa, EmpresaView empresaView)
         {            
             if (empresa.NomeFantasia.ToUpper() != empresaView.NomeFantasia.ToUpper())
@@ -97,5 +98,6 @@ namespace Fornecedores.Services
             if(empresa.CNPJ.Length != 18)
                 throw new ArgumentException("CNPJ Informado é Inálido ");
         }
+        #endregion
     }
 }

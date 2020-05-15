@@ -47,7 +47,6 @@ namespace Fornecedores.Repositories
 		                        dbo.Pessoa P								
 	                                WHERE J.IdPessoa = p.Id");
 
-
             if (!string.IsNullOrWhiteSpace(cnpj))
                 sqlSelect.Append(" AND J.CNPJ = @cnpj");
             else
@@ -67,7 +66,6 @@ namespace Fornecedores.Repositories
 
             return new PesJuridicaView();
         }
-
         public List<PesJuridicaView> GetAll()
         {
             List<PesJuridicaView> listaPesJuridica = new List<PesJuridicaView>();

@@ -64,7 +64,6 @@ namespace Fornecedores.Repositories
                                     AND E.IdBairro = B.Id
                                     AND E.idCidade = B.idCidade");
 
-
             sqlSelect.Append(" AND  E.Id = @endereco");
 
             SqlCommand cmd = new SqlCommand(sqlSelect.ToString(), _conn);
@@ -174,7 +173,5 @@ namespace Fornecedores.Repositories
                 Complemento = reader["Complemento"].ToString().Trim()
             };
         }
-
-
     }
 }

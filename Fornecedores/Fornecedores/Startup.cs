@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
+
 namespace Fornecedores
 {
     public class Startup
@@ -21,7 +22,7 @@ namespace Fornecedores
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-                
+            
             services.AddTransient<IUnitOfWork,UnitOfWork> ();
 
             services.AddSwaggerGen(c =>
